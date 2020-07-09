@@ -1,7 +1,13 @@
 docker image ls
+
 docker container ls -a
+
 docker run -it debian
+
 pwd
+
 ls
+
 uname -a
+
 exit
