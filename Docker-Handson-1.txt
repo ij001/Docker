@@ -1,0 +1,7 @@
+docker pull debian
+docker image ls
+docker run -it debian
+pwd
+ls
+uname -a
+exit
