@@ -1,0 +1,23 @@
+---------------Containerize MySql---------------
+docker-compose up
+docker container ls
+docker exec -it docker-build_payroll-mysql_1 bash
+mysql -u root -p
+root
+show databases;
+use ormlearn;
+show tables;
+select * from employees;
+
+---------Linking Microservice with MySql---------
+docker-compose up
+curl -s -u admin:pwd http://localhost:8091/country-controller/countries (in git bash)
+
+docker-compose up
+curl -s http://localhost:8092/employee-controller/employees (in git bash)
+curl -s -u user:pwd http://localhost:8091/authenticate (in git bash)
+
+docker-compose up
+curl -s http://localhost:8094/employee-service/department-controller/departments (in git bash)
+curl -s -u user:pwd http://localhost:8094/authentication-service/authenticate (in git bash)
+curl -s -u user:pwd http://localhost:8094/authentication-service/country-controller/countries (in git bash)
