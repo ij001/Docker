@@ -1,0 +1,5 @@
+docker pull nginx
+docker run --name my-nginx -p 80:80 -v ~/docker-learn/html:/usr/share/nginx/html nginx
+docker stop my-nginx
+docker start my-nginx
+docker build .
