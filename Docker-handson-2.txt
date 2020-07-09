@@ -1,0 +1,10 @@
+docker pull nginx
+docker run --name my-nginx -d -p 8085:80 -v /d/dockerlearn/html:/usr/share/nginx/html nginx
+docker container ls
+docker stop my-nginx
+docker container ls -a 
+docker start my-nginx
+docker build .
+docker image ls
+docker container rm 552
+docker rmi 540
