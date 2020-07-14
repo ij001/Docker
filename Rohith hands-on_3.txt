@@ -1,0 +1,18 @@
+docker-compose up
+docker container ls
+docker exec -it docker-build_payroll-mysql_1 bash
+mysql -u root -p
+root
+show databases;
+use ormlearn;
+show tables;
+select * from employees;
+docker-compose up
+curl -s -u admin:pwd http://localhost:8091/country-controller/countries
+docker-compose up
+curl -s http://localhost:8092/employee-controller/employees
+curl -s -u user:pwd http://localhost:8091/authenticate
+docker-compose up
+curl -s http://localhost:8094/employee-service/department-controller/departments
+curl -s -u user:pwd http://localhost:8094/authentication-service/authenticate
+curl -s -u user:pwd http://localhost:8094/authentication-service/country-controller/countries
