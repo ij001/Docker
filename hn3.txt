@@ -1,0 +1,25 @@
+***Containerize MySQL***
+docker-compose up
+docker exec -it payroll-mysql bash
+mysql -u root -p
+show databases;
+use payroll;
+select * from employee;
+
+
+***Linking Microservice with MySQL***
+docker-compose up
+curl -s -u user:pwd http://localhost:8091/countries
+
+docker-compose up
+curl -s http://localhost:8092/employees 
+curl -s -u user:pwd http://localhost:8091/authenticate
+
+docker-compose up
+curl -s -u user:pwd http://localhost:8094/authentication-service/authenticate
+curl -s -u user:pwd http://localhost:8094/authentication-service/countries
+
+
+
+
+
